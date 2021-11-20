@@ -12,6 +12,7 @@ import UIKit
 struct QuizBrain {
     
     var questionNumber = 0
+    var score = 0
     
     let quiz = [
         Question(q: "A slug's blood is green.", a: "True"),
@@ -48,14 +49,25 @@ struct QuizBrain {
     }
     
     mutating func nextQuestion() {
-        if questionNumber + 1 < quiz.count
-        {
+        
+        if questionNumber + 1 != quiz.count {
             questionNumber += 1
         } else {
-            questionNumber = 0
+            
+            self.score = 0
+            self.questionNumber = 0
         }
     }
-    func keepScore(score: Int) ->String {
-        return String( " Score: \(score)")
+    
+    mutating func gotAnswerRight() {
+        self.score += 1
+    }
+    
+    func gameOver(_ viewContorller: ViewController) -> Void {
+        
+        let scoreAlertController = UIAlertController(title: "Game Over", message: "Score: \(score) out of \(quiz.count)", preferredStyle: .alert)
+        let closeButton = UIAlertAction(title: "Restart Game?", style: .destructive, handler: .none)
+        scoreAlertController.addAction(closeButton)
+        return viewContorller.present(scoreAlertController, animated: true, completion: viewContorller.updateUI)
     }
 }

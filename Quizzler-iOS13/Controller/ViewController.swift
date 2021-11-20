@@ -27,25 +27,32 @@ class ViewController: UIViewController {
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         
+        print(quizBrain.questionNumber, quizBrain.quiz.count - 1)
+
         let userAnswer = sender.currentTitle!
         let userGotItRight = quizBrain.checkAnswer(userAnswer)
         
         if userGotItRight {
             sender.backgroundColor = .green
+            quizBrain.gotAnswerRight()
         } else {
             sender.backgroundColor = .red
         }
-        
-        quizBrain.nextQuestion()
 
-        timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        if quizBrain.quiz.count - 1 != quizBrain.questionNumber {
+            quizBrain.nextQuestion()
+            timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        } else {
+            quizBrain.gameOver(self)
+            quizBrain.nextQuestion()
+        }
     }
     
-    @objc func updateUI() {
+    @objc func updateUI() -> Void{
         trueButton.backgroundColor = .clear
         falseButton.backgroundColor = .clear
         questionLabel.text = quizBrain.getQuestionText()
         progressBar.progress = quizBrain.getProgress()
-        scoreLabel.text = quizBrain.keepScore(score: <#T##Int#>)
+        scoreLabel.text = "Score: \(quizBrain.score)"
     }
 }
