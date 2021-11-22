@@ -30,6 +30,7 @@ struct QuizBrain {
     
     mutating func checkAnswer(_ userAnswer: String) -> Bool {
         print(userAnswer)
+        print(quiz[questionNumber].correctAnswer )
         if userAnswer == quiz[questionNumber].correctAnswer {
             self.score += 1
             return true
@@ -42,8 +43,8 @@ struct QuizBrain {
         return quiz[questionNumber].text
     }
     
-    func getAnswerText(whichAnswer: Int) -> [String] {
-        return quiz[questionNumber].answer[whichAnswer].text
+    func getButtonText(whichButton: Int) -> String {
+        return quiz[questionNumber].answer[whichButton]
     }
     
     func getProgress() -> Float{

@@ -51,7 +51,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w5F-ON-huU"/>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3jx-vg-nOJ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rN-Mc-DwR">
@@ -65,7 +65,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bV5-I0-N4v"/>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RSW-ht-hbz"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbn-vQ-GyC">
@@ -79,7 +79,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l5O-4l-UOq"/>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bMC-xu-YwW"/>
                                         </connections>
                                     </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="TXm-qh-7Xg">
@@ -114,7 +114,7 @@
                     <connections>
                         <outlet property="Button1" destination="oVw-Hl-IRe" id="mWC-r8-msf"/>
                         <outlet property="Button2" destination="3rN-Mc-DwR" id="1XU-M2-4LF"/>
-                        <outlet property="Button3" destination="tbn-vQ-GyC" id="wn9-Yo-Ejd"/>
+                        <outlet property="Button3" destination="tbn-vQ-GyC" id="Iqm-Cc-P5n"/>
                         <outlet property="progressBar" destination="TXm-qh-7Xg" id="MiW-v3-YzE"/>
                         <outlet property="questionLabel" destination="rSI-li-mhO" id="Zab-LX-6gM"/>
                         <outlet property="scoreLabel" destination="UPw-XW-cpc" id="JCL-lf-San"/>

@@ -4,8 +4,6 @@
 //
 //  Created by Angela Yu on 12/07/2019.
 //  Copyright © 2019 The App Brewery. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -18,7 +16,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     
     var quizBrain = QuizBrain()
-    
     var timer = Timer()
     
     override func viewDidLoad() {
@@ -46,14 +43,17 @@ class ViewController: UIViewController {
         }
     }
     
-    @objc func updateUI() -> Void{
+    @objc func updateUI() {
+        
+        Button1.setTitle(quizBrain.getButtonText(whichButton: 0), for: .normal)
+        Button2.setTitle(quizBrain.getButtonText(whichButton: 1), for: .normal)
+        Button3.setTitle(quizBrain.getButtonText(whichButton: 2), for: .normal)
+        
+        
         Button1.backgroundColor = .clear
         Button2.backgroundColor = .clear
         Button3.backgroundColor = .clear
         questionLabel.text = quizBrain.getQuestionText()
-        Button1.titleLabel?.text = quizBrain.quiz[quizBrain.questionNumber].answer[0]
-        Button2.titleLabel?.text = quizBrain.quiz[quizBrain.questionNumber].answer[1]
-        Button3.titleLabel?.text = quizBrain.quiz[quizBrain.questionNumber].answer[2]
 
         progressBar.progress = quizBrain.getProgress()
         scoreLabel.text = "Score: \(quizBrain.score)"
