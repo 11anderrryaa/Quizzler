@@ -24,7 +24,10 @@ struct QuizBrain {
         Question(q: "Which of these colours is NOT featured in the logo for Google?", a: ["Green", "Orange", "Blue"], correctAnswer: "Orange"),
         Question(q: "What alcoholic drink is made from molasses?", a: ["Rum", "Whisky", "Gin"], correctAnswer: "Rum"),
         Question(q: "What type of animal was Harambe?", a: ["Panda", "Gorilla", "Crocodile"], correctAnswer: "Gorilla"),
-        Question(q: "Where is Tasmania located?", a: ["Indonesia", "Australia", "Scotland"], correctAnswer: "Australia")
+        Question(q: "Where is Tasmania located?", a: ["Indonesia", "Australia", "Scotland"], correctAnswer: "Australia"),
+        Question(q: "Who was the only member of the LOTR cast to meet J.R.R.?", a: ["Ian Mckellen", "Ian Holm","Christopher Lee"], correctAnswer: "Christopher Lee"),
+        Question(q: "According to EMS Saftey, What is the ratio for compressions to breaths when giving CPR?", a: ["30:5", "15:2","30:2"], correctAnswer: "30:2"),
+        Question(q: "What year did Swift (Programming Language) first apprear? ", a: ["2014", "1984", "2001"], correctAnswer: "2014")
         
     ]
     
